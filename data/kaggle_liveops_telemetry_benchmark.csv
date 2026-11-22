@@ -1,0 +1,9 @@
+stream_id,metric_key,source_service,current_value,unit,threshold_warning,threshold_critical,alarm_status,p95_value,historical_trend_direction,sample_timestamp
+STM-101,cluster_ingress_qps,API Gateway Envoy,4820,requests/sec,6000,8500,NOMINAL,5200,RISING,2026-11-22T17:15:00Z
+STM-102,order_processing_latency_p95,Checkout Microservice,142,milliseconds,300,750,NOMINAL,158,STABLE,2026-11-22T17:15:00Z
+STM-103,database_conn_pool_saturation,PostgreSQL Primary RDS,88.4,percent,75.0,90.0,WARNING_THRESHOLD,92.0,RISING,2026-11-22T17:15:00Z
+STM-104,memory_rss_utilization,Redis Cluster Node 03,94.2,percent,80.0,92.0,CRITICAL_ALARM,95.1,SPIKING,2026-11-22T17:15:00Z
+STM-105,active_websocket_connections,Realtime Edge Push,18450,sockets,25000,40000,NOMINAL,19200,STABLE,2026-11-22T17:15:00Z
+STM-106,error_rate_5xx_ratio,Payment Webhook Ingress,0.14,percent,1.0,3.0,NOMINAL,0.18,FALLING,2026-11-22T17:15:00Z
+STM-107,worker_queue_backlog_depth,BullMQ Dispatcher,120,tasks,500,2000,NOMINAL,180,STABLE,2026-11-22T17:15:00Z
+STM-108,gc_pause_latency_p99,Java JVM Core Service,28.5,milliseconds,50.0,120.0,NOMINAL,32.0,STABLE,2026-11-22T17:15:00Z

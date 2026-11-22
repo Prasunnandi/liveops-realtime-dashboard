@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  liveops-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5006:5006"
+    environment:
+      - PORT=5006
+      - NODE_ENV=production
+    restart: always
+
+  liveops-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3010:80"
+    depends_on:
+      - liveops-backend
+    restart: always
